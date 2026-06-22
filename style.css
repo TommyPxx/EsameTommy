@@ -1,0 +1,267 @@
+/* =============================================
+   VARIABILI — cambia questi valori per
+   ridisegnare l'intero sito in un colpo solo
+   ============================================= */
+:root {
+  --colore-primario:   #d8e4ff;   /* blu principale */
+  --colore-testo:      #222622;   /* quasi nero */
+  --colore-sfondo:     #e4f4e7;   /* bianco */
+  --colore-grigio:     #f4f4f5;   /* sfondo sezioni alternate */
+  --colore-highlight:  #82a882;   /* colore del testo evidenziato */
+  --colore-colorato:   #60b52c;
+
+  --font-titoli: 'Georgia', serif;
+  --font-testo:  'Helvetica Neue', Arial, sans-serif;
+
+  --raggio:      8px;             /* arrotondamento bordi */
+  --max-width:   80%;           /* larghezza massima del contenuto */
+}
+
+
+/* =============================================
+   RESET BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.titolo{
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;        /* scrolla morbidamente ai link interni */
+}
+.colorato {
+  color: var(--colore-colorato);
+ font-weight: bold;
+}
+
+body {
+  font-family: var(--font-testo);
+  color: var(--colore-testo);
+  background: var(--colore-sfondo);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+#FadeIn{
+  opacity: 0%;
+  animation: forwards;
+  animation-name: FadeIn;
+  animation-duration: 1s;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.testo-centrato {
+  text-align: center;
+}
+.vid {
+  text-align: center;
+  width: 100vw;
+  height:90vh;
+  object-fit: fill;
+}
+
+
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+.sfondo-grigio {
+  background: var(--colore-grigio);
+}
+
+.highlight {
+  color: var(--colore-highlight);
+}
+
+
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.paragrafo{
+  margin-bottom: 1rem;
+  color: #444;
+  font-family: serif,Georgia;
+  font-size: 2rem;
+  border: 3px solid rgb(81, 94, 129);
+  padding: 3rem;
+  border-radius: 35px;
+  background-color: #b8cfff49;
+}
+a {
+  color: var(--colore-primario);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#Grow{
+  transform: scale(1);
+  transition: transform 0.3s ease;
+
+}
+
+#Grow:hover{
+  transform: scale(1.2) ;
+  transition: transform 0.6s ease;
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+#animatoVersoAlto{
+animation-name: SlideUpward;
+animation-duration: 2s;
+}
+
+@keyframes SlideUpward{
+  from{transform:translateY(300%)}
+}
+@keyframes FadeIn{
+  100%{opacity:1}
+}
+
+
+
+/* =============================================
+   HEADER
+   ============================================= */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--colore-sfondo);
+  border-bottom: 1px solid #6e887440;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* =============================================
+   BOTTONE
+   ============================================= */
+.bottone {
+  background: var(--colore-primario);
+  color: #fff;
+  padding-bottom: auto;
+  padding-top: auto;
+  border-radius: var(--raggio);
+  font-size: 1rem;
+  transition: opacity 0.2s;
+  width:80%;
+  height: 10rem;
+  text-align: center;
+  padding-top: 3rem;
+  font-size:40px ;
+  text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+.storia{
+  background-image: url('immagini/storiaimg.jpg');
+  background-position-x: center ; /* Center the image */
+  background-position-y: 40% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+.InglesePotenziato{
+  background-image: url('immagini/Ingimg.jpg');
+  background-position-x: center ; /* Center the image */
+  background-position-y: 40% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+.Tecnologia{
+  background-image: url('immagini/tecimg.jpg');
+  background-position-x: center ; /* Center the image */
+  background-position-y: 65% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.Arte{
+  background-image: url('immagini/arteimg.avif');
+    background-position-x: center ; /* Center the image */
+  background-position-y: 55% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.Geografia{
+  background-image: url('immagini/geoimg.jpg');
+    background-position-x: center ; /* Center the image */
+  background-position-y: 55% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.EducazioneCivica{
+  background-image: url('immagini/edcimg.jpg');
+    background-position-x: center ; /* Center the image */
+  background-position-y: 65% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.Scienze{
+  background-image: url('immagini/sciimg.png');
+    background-position-x: center ; /* Center the image */
+  background-position-y: 30% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.Musica{
+  background-image: url('immagini/musimg.jpg');
+  background-position-x: center ; /* Center the image */
+  background-position-y: 50% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.CompitoRealta{
+  background-image: url('immagini/compimg.jpg');
+  background-position-x: center ; /* Center the image */
+  background-position-y: 50% ; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
+.pulsanti{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+
+/* =============================================
+   SEZIONI
+   =============================================*/ 
+.section {
+  padding: 5rem 0;
+}
+
+
+
